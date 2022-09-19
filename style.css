@@ -1,0 +1,36 @@
+* {  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ body {
+    background-image: url(img/Fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+ }
+
+ main { 
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    main h1 { 
+        color: #DF2929;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    main .social-media {
+        display: flex;
+        align-content: center;
+    }
+    main .social-media img { 
+        width: 36px;
+ } 
+
+ 
