@@ -32,5 +32,52 @@
     main .social-media img { 
         width: 36px;
  } 
+    main form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+     main form label {
+        display: flex;
+        flex-direction: column;
+     }
+
+     main form label span {
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
+
+    main form input {
+        background-color: white;
+        width: 300px;
+        height:50px;
+        padding: 0 0.5rem;
+        margin-top: 1rem;
+        outline: none;
+        color: black;
+        font-size: 1rem;
+        border: 1px solid #040b18
+        border-radius: 8px;
+    }
+
+    main form input[type="submit"] {
+        cursor: pointer;
+        width: 50%;
+        margin-top: 4rem;
+        border: none;
+        border-radius: 32px;
+        background: rgb(10, 219, 219);
+        color: black;
+        font-size: 1.1rem;
+        transition: all .3s ease-in-out;
+    }
+    
+    main form input[type="submit"]:hover {
+        background-color: rgb(4, 114, 77);
+    }
+
+   
+
+
 
  
