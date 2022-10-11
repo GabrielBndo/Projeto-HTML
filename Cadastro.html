@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,56 @@
     <title>Página de cadastro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <script>
+        function validar() {
+            var Senha = formuser.Senha.value;
+            var rep_Senha = formuser.rep_Senha.value;
+
+            if (Senha == "" || Senha.lenght <= 5) {
+                alert('Preencha o campo senha com mínimo 6 caracteres');
+                formuser.Senha.focus();
+                return false;
+            }
+            if (rep_Senha == "" || rep_Senha.lenght <= 5) {
+                alert('Preencha o campo senha com mínimo 6 caracteres');
+                formuser.rep_Senha.focus();
+                return false;
+            }
+            if (Senha != rep_Senha) {
+                alert('senhas diferentes')
+                form1.Senha.focus();
+                return false;
+            }
+        }
+    </script>
 
 </head>
+
 <body>
     <main>
         <h1>Faça seu cadastro</h1>
         <p>
         <div class="social-media">
             <a href="#">
-                <img src="img/Facebook.png" alt="facebook">
+                <img src="Facebook.png" alt="facebook">
             </a>
             <a href="#">
-                <img src="img/linkedin.png" alt="Linkedin">
+                <img src="linkedin.png" alt="Linkedin">
             </a>
             <a href="#">
-                <img src="img/google.png" alt="Google">
+                <img src="google.png" alt="Google">
             </a>
-            
+
         </div>
 
         <div class="alternative">
             <span>OR</span>
         </div>
-        <form action="">
+        <form name="formuser" method="post" action="#">
             <label for="Nome">
                 <span>Nome</span>
                 <input type="text" id="Nome" nome="Nome">
@@ -54,15 +79,21 @@
 
             <label for="Senha">
                 <span>Senha</span>
-                <input type="text" id="Senha" nome="Senha">
+                <input type="password" nome="Senha">
+
+            </label>
+            <label for="rep_Senha">
+                <span>Confirme sua senha</span>
+                <input type="password" nome="rep_Senha">
 
             </label>
 
-            <input type="submit" value="Criar conta">
+            <input type="submit" onclick="return validar()">
         </form>
     </main>
 
 
-</section>    
+    </section>
 </body>
+
 </html>
